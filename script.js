@@ -79,3 +79,23 @@ function validarQuiz(event) {
         sinteseVoz.speak(feedbackAudio);
     }
 }
+// Cole isto no final do seu script.js
+
+let audioRealAtual = null; // Guarda o áudio que está a tocar para podermos pará-lo
+
+function tocarAudioReal(nomeDoArquivo) {
+    // 1. Se o robô do navegador estiver a falar, cancela a voz dele
+    if (sinteseVoz) {
+        sinteseVoz.cancel();
+    }
+    
+    // 2. Se já houver outro áudio gravado a tocar, para o anterior
+    if (audioRealAtual) {
+        audioRealAtual.pause();
+        audioRealAtual.currentTime = 0;
+    }
+
+    // 3. Cria e toca o seu arquivo gravado
+    audioRealAtual = new Audio(nomeDoArquivo);
+    audioRealAtual.play();
+}
