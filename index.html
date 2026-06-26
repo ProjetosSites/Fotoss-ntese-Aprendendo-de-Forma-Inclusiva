@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Inclusiva - Curso de Fotossíntese Completo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo da aula</a>
+
+    <div class="plataforma-container">
+        
+        <aside class="sidebar-curso">
+            <header class="sidebar-header">
+                <h1>Fotossíntese</h1>
+                <p class="meta-curso">7º Ano • Ensino Fundamental</p>
+            </header>
+            
+            <nav aria-label="Menu de Aulas" class="menu-curso">
+                <ul>
+                    <li><button onclick="mudarAula('inicio')" id="btn-inicio" aria-current="step">📖 Pág 1: Início</button></li>
+                    <li><button onclick="mudarAula('diagnostico')" id="btn-diagnostico">👥 Pág 2: Diagnóstico</button></li>
+                    <li><button onclick="mudarAula('modulo1')" id="btn-modulo1">🌱 Pág 3: Módulo 1</button></li>
+                    <li><button onclick="mudarAula('modulo2')" id="btn-modulo2">🔬 Pág 4: Módulo 2</button></li>
+                    <li><button onclick="mudarAula('modulo3')" id="btn-modulo3">🌍 Pág 5: Módulo 3</button></li>
+                    <li><button onclick="mudarAula('curiosidades')" id="btn-curiosidades">💡 Pág 6: Curiosidades</button></li>
+                    <li><button onclick="mudarAula('atividades')" id="btn-atividades">📝 Pág 7: Atividades</button></li>
+                    <li><button onclick="mudarAula('tecnologias')" id="btn-tecnologias">♿ Pág 8: Tech Assistivas</button></li>
+                    <li><button onclick="mudarAula('dua')" id="btn-dua">🎯 Pág 9: DUA</button></li>
+                    <li><button onclick="mudarAula('referencias')" id="btn-referencias">📚 Pág 10: Referências</button></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="conteudo-principal" class="conteudo-aula">
+            
+            <section id="inicio" class="secao-aula ativa">
+                <h2>Bem-vindo!</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('inicio')">🔊 Ouvir Texto</button>
+                <div class="card-texto">
+                    <p>Este site foi desenvolvido para ensinar o conteúdo de Fotossíntese de maneira acessível e inclusiva para estudantes com deficiência visual. Aqui você encontrará textos claros, descrições de imagens, áudios explicativos, atividades e recursos que facilitam a aprendizagem.</p>
+                    <h3>Tema</h3><p>Fotossíntese</p>
+                    <h3>Público-alvo</h3><p>Alunos do 7º ano do Ensino Fundamental com deficiência visual (cegueira ou baixa visão).</p>
+                    <h3>Objetivos de Aprendizagem</h3>
+                    <ul>
+                        <li>Compreender o que é a fotossíntese.</li>
+                        <li>Identificar os elementos necessários para que ela aconteça.</li>
+                        <li>Explicar a importância da fotossíntese para os seres vivos.</li>
+                        <li>Relacionar a fotossíntese com a produção de oxigênio e alimentos.</li>
+                    </ul>
+                    <h3>Justificativa</h3>
+                    <p>A fotossíntese é um dos processos mais importantes da natureza, pois permite que as plantas produzam seu próprio alimento e liberem oxigênio para a atmosfera.</p>
+                    <p>Este site foi desenvolvido seguindo princípios de acessibilidade, utilizando recursos como audiodescrição, textos alternativos e conteúdo compatível com leitores de tela, garantindo que estudantes com deficiência visual tenham acesso ao conhecimento em igualdade de condições.</p>
+                </div>
+            </section>
+
+            <section id="diagnostico" class="secao-aula">
+                <h2>Página 2 – Diagnóstico do Público</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('diagnostico')">🔊 Ouvir Texto</button>
+                <div class="card-texto">
+                    <h3>Características do Público</h3>
+                    <p>Os estudantes com deficiência visual podem apresentar cegueira total ou baixa visão. Para favorecer a aprendizagem, é importante utilizar recursos acessíveis que permitam compreender o conteúdo sem depender apenas das imagens.</p>
+                    <p>Neste site foram utilizados:</p>
+                    <ul>
+                        <li>textos com linguagem simples;</li>
+                        <li>descrições completas das imagens;</li>
+                        <li>áudios explicativos;</li>
+                        <li>compatibilidade com leitores de tela;</li>
+                        <li>fonte ampliada e alto contraste entre texto e fundo.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="modulo1" class="secao-aula">
+                <h2>Página 3 – Módulo 1: O que é Fotossíntese?</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('modulo1')">🔊 Ouvir Módulo 1</button>
+                <div class="card-texto">
+                    <p>A fotossíntese é o processo pelo qual as plantas produzem seu próprio alimento utilizando a luz do Sol, a água absorvida pelas raíces e o gás carbônico presente no ar.</p>
+                    <p>Como resultado desse processo, a planta produz glicose, que serve como alimento, e libera oxigênio para a atmosfera.</p>
+                    <div class="box-imagem">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80" alt="Imagem de uma árvore verde recebendo luz do Sol. As raízes absorvem água do solo, as folhas recebem gás carbônico do ar e liberam oxigênio para a atmosfera.">
+                    </div>
+                </div>
+            </section>
+
+            <section id="modulo2" class="secao-aula">
+                <h2>Página 4 – Módulo 2: Como acontece a Fotossíntese?</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('modulo2')">🔊 Ouvir Módulo 2</button>
+                <div class="card-texto">
+                    <p>A fotossíntese ocorre principalmente nas folhas das plantas. Ela acontece em quatro etapas:</p>
+                    <ol>
+                        <li>A planta absorve água pelas raízes.</li>
+                        <li>As folhas recebem gás carbônico.</li>
+                        <li>A luz do Sol fornece energia.</li>
+                        <li>A planta produz alimento e libera oxigênio.</li>
+                    </ol>
+                    <blockquote class="curiosidade-box">
+                        <strong>Curiosidade:</strong> Uma única árvore adulta pode produzir oxigênio suficiente para beneficiar muitas pessoas ao longo do ano.
+                    </blockquote>
+                </div>
+            </section>
+
+            <section id="modulo3" class="secao-aula">
+                <h2>Página 5 – Módulo 3: Importância da Fotossíntese</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('modulo3')">🔊 Ouvir Módulo 3</button>
+                <div class="card-texto">
+                    <p>A fotossíntese é essencial para a vida na Terra porque produz oxigênio, fornece alimento para as plantas e sustenta toda a cadeia alimentar.</p>
+                    <p>Sem esse processo, os seres vivos não teriam oxigênio suficiente para respirar.</p>
+                </div>
+            </section>
+
+            <section id="curiosidades" class="secao-aula">
+                <h2>Página 6 – Curiosidades</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('curiosidades')">🔊 Ouvir Curiosidades</button>
+                <div class="card-texto">
+                    <ul>
+                        <li>As plantas fabricam seu próprio alimento.</li>
+                        <li>A Amazônia possui uma enorme diversidade de plantas que realizam fotossíntese.</li>
+                        <li>O oxigênio liberado pelas plantas é fundamental para a vida.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="atividades" class="secao-aula">
+                <h2>Página 7 – Atividades</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('atividades')">🔊 Ouvir Atividades</button>
+                <div class="card-texto">
+                    <h3>Questões Objetivas</h3>
+                    <form id="quiz-form" onsubmit="validarQuiz(event)">
+                        <fieldset>
+                            <legend>1. O que é fotossíntese?</legend>
+                            <label><input type="radio" name="q1" value="A" required> Respiração das plantas</label><br>
+                            <label><input type="radio" name="q1" value="B"> Processo pelo qual as plantas produzem seu alimento</label><br>
+                            <label><input type="radio" name="q1" value="C"> Reprodução das plantas</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>2. Qual é a principal fonte de energia da fotossíntese?</legend>
+                            <label><input type="radio" name="q2" value="A" required> Lua</label><br>
+                            <label><input type="radio" name="q2" value="B"> Sol</label><br>
+                            <label><input type="radio" name="q2" value="C"> Chuva</label>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>3. Qual gás é liberado durante a fotossíntese?</legend>
+                            <label><input type="radio" name="q3" value="A" required> Oxigênio</label><br>
+                            <label><input type="radio" name="q3" value="B"> Nitrogênio</label><br>
+                            <label><input type="radio" name="q3" value="C"> Hidrogênio</label>
+                        </fieldset>
+
+                        <button type="submit" class="btn-enviar">Verificar Respostas</button>
+                    </form>
+
+                    <div id="resultado-quiz" aria-live="polite" class="resultado-box-mensagem"></div>
+
+                    <div class="atividade-pratica-box">
+                        <h3>Questões Discursivas</h3>
+                        <p>1. Explique, com suas palavras, por que a fotossíntese é importante.</p>
+                        <p>2. Como a fotossíntese contribui para a vida na Terra?</p>
+                        
+                        <h3>Atividade Prática</h3>
+                        <p>Ouça o áudio da aula e grave uma resposta explicando como acontece a fotossíntese.</p>
+                        
+                        <h3>Desafio Inclusivo</h3>
+                        <p>Depois de ouvir a explicação, grave um áudio de até dois minutos contando todas as etapas da fotossíntese.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tecnologias" class="secao-aula">
+                <h2>Página 8 – Tecnologias Assistivas</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('tecnologias')">🔊 Ouvir Texto</button>
+                <div class="card-texto">
+                    <p>Este site utiliza as seguintes tecnologias integradas e diretrizes:</p>
+                    <ul>
+                        <li><strong>audiodescrição:</strong> narrações estruturadas para contextualização;</li>
+                        <li><strong>textos alternativos nas imagens:</strong> tags 'alt' descritivas legíveis por máquinas;</li>
+                        <li><strong>compatibilidade com leitores de tela:</strong> código limpo estruturado semanticamente.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="dua" class="secao-aula">
+                <h2>Página 9 – Desenho Universal para Aprendizagem (DUA)</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('dua')">🔊 Ouvir Diretrizes DUA</button>
+                <div class="card-texto">
+                    <p><strong>Múltiplas formas de representação:</strong><br>O conteúdo é apresentado em texto, áudio e imagens com descrição.</p>
+                    <p><strong>Múltiplas formas de ação e expressão:</strong><br>O estudante responde por escrito ou por gravação de áudio.</p>
+                    <p><strong>Múltiplas formas de engajamento:</strong><br>São utilizados curiosidades, atividades interativas e desafios para motivar a aprendizagem.</p>
+                </div>
+            </section>
+
+            <section id="referencias" class="secao-aula">
+                <h2>Página 10 – Referências</h2>
+                <button class="btn-leitura" onclick="lerTextoAtual('referencias')">🔊 Ouvir Referências</button>
+                <div class="card-texto">
+                    <ul>
+                        <li>Livro de Ciências do 7º ano.</li>
+                        <li>Ministério da Educação.</li>
+                        <li>Imagens de bancos gratuitos com descrição.</li>
+                        <li>Google Sites.</li>
+                        <li>Google Forms.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
