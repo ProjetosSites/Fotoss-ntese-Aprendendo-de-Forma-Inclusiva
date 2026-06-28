@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Inclusiva - Curso de Fotossíntese Completo</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -21,16 +24,16 @@
             
             <nav aria-label="Menu de Aulas" class="menu-curso">
                 <ul>
-                    <li><button onclick="mudarAula('inicio')" id="btn-inicio" aria-current="step">📖 Pág 1: Início</button></li>
-                    <li><button onclick="mudarAula('diagnostico')" id="btn-diagnostico">👥 Pág 2: Diagnóstico</button></li>
-                    <li><button onclick="mudarAula('modulo1')" id="btn-modulo1">🌱 Pág 3: Módulo 1</button></li>
-                    <li><button onclick="mudarAula('modulo2')" id="btn-modulo2">🔬 Pág 4: Módulo 2</button></li>
-                    <li><button onclick="mudarAula('modulo3')" id="btn-modulo3">🌍 Pág 5: Módulo 3</button></li>
-                    <li><button onclick="mudarAula('curiosidades')" id="btn-curiosidades">💡 Pág 6: Curiosidades</button></li>
-                    <li><button onclick="mudarAula('atividades')" id="btn-atividades">📝 Pág 7: Atividades</button></li>
-                    <li><button onclick="mudarAula('tecnologias')" id="btn-tecnologias">♿ Pág 8: Tech Assistivas</button></li>
-                    <li><button onclick="mudarAula('dua')" id="btn-dua">🎯 Pág 9: DUA</button></li>
-                    <li><button onclick="mudarAula('referencias')" id="btn-referencias">📚 Pág 10: Referências</button></li>
+                    <li><button onclick="mudarAula('inicio')" id="btn-inicio" aria-current="step"><i class="fas fa-home" aria-hidden="true"></i> Pág 1: Início</button></li>
+                    
+                    <li><button onclick="mudarAula('modulo1')" id="btn-modulo1"><i class="fas fa-leaf" aria-hidden="true"></i> Pág 2: Módulo 1</button></li>
+                    <li><button onclick="mudarAula('modulo2')" id="btn-modulo2"><i class="fas fa-tint" aria-hidden="true"></i> Pág 3: Módulo 2</button></li>
+                    <li><button onclick="mudarAula('modulo3')" id="btn-modulo3"><i class="fas fa-globe-americas" aria-hidden="true"></i> Pág 4: Módulo 3</button></li>
+                    <li><button onclick="mudarAula('curiosidades')" id="btn-curiosidades"><i class="fas fa-star" aria-hidden="true"></i> Pág 5: Curiosidades</button></li>
+                    <li><button onclick="mudarAula('atividades')" id="btn-atividades"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Pág 6: Atividades</button></li>
+                    <li><button onclick="mudarAula('tecnologias')" id="btn-tecnologias"><i class="fab fa-accessible-icon" aria-hidden="true"></i> Pág 7: Tech Assistivas</button></li>
+                    <li><button onclick="mudarAula('dua')" id="btn-dua"><i class="fas fa-bullseye" aria-hidden="true"></i> Pág 8: DUA</button></li>
+                    <li><button onclick="mudarAula('referencias')" id="btn-referencias"><i class="fas fa-book-open" aria-hidden="true"></i> Pág 9: Referências</button></li>
                 </ul>
             </nav>
         </aside>
@@ -59,40 +62,61 @@
                 </div>
             </section>
 
-            <section id="diagnostico" class="secao-aula">
-                <h2>Página 2 – Diagnóstico do Público</h2>
-               <button class="btn-leitura" onclick="tocarAudioReal('diagnostico.mp3', this)">🔊 Ouvir Texto</button>
+                        <section id="modulo1" class="secao-aula">
+                <h2>Módulo 1: Bem-vindos ao Nosso Espaço de Aprendizagem</h2>
+                
+                <div class="grid-conteudo">
+                    <div class="coluna-texto">
+                        <p>Olá, estudante! Prepare-se para uma jornada incrível para descobrir como a natureza funciona.</p>
+                        
+                        <h3>O Superpoder das Plantas: A Fotossíntese</h3>
+                        <p>Você sabia que as plantas conseguem produzir a sua própria comida? O nome desse "superpoder" é fotossíntese, um dos processos mais fantásticos e importantes do nosso planeta.</p>
+                        <p>É através da fotossíntese que as plantas utilizam a energia da luz do Sol, a água e um gás invisível chamado gás carbônico para criar o seu alimento. E a melhor parte de tudo isso? Durante esse processo, as plantas liberam na atmosfera o oxigênio, que é o ar essencial que todos nós respiramos para viver!</p>
+                        
+                        <h3>Um Espaço Feito Especialmente para Você</h3>
+                        <p>Este site foi planejado e construído com muito carinho para que todos possam aprender com total autonomia. Acreditamos que a educação deve ser acessível e igualitária. Para que a sua experiência de aprendizagem seja a melhor possível, este ambiente conta com:</p>
+                        
+                        <ul>
+                            <li>Textos claros e diretos, para facilitar os seus estudos.</li>
+                            <li>Audiodescrição detalhada das imagens, garantindo que você compreenda todos os detalhes visuais.</li>
+                            <li>Compatibilidade total com leitores de tela, permitindo uma navegação simples e estruturada.</li>
+                            <li>Materiais em áudio, para que você possa escutar o conteúdo de onde estiver.</li>
+                        </ul>
+                        
+                        <p>Esperamos que este site desperte a sua curiosidade sobre o meio ambiente e ajude você a entender como a fotossíntese é fundamental para a manutenção da vida na Terra.</p>
+                        <p><strong>Aproveite o conteúdo e vamos aprender juntos!</strong></p>
+                        
+                        <div class="card-player">
+                            <i class="fas fa-volume-up" aria-hidden="true" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                            <div class="player-info">
+                                <strong>Ouvir introdução</strong>
+                                <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
+                                <button class="btn-leitura" onclick="lerTextoAtual('modulo1')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                            </div>
+                        </div>
+                    </div>
 
-
-                <div class="card-texto">
-                    <h3>Características do Público</h3>
-                    <p>Os estudantes com deficiência visual podem apresentar cegueira total ou baixa visão. Para favorecer a aprendizagem, é importante utilizar recursos acessíveis que permitam compreender o conteúdo sem depender apenas das imagens.</p>
-                    <p>Neste site foram utilizados:</p>
-                    <ul>
-                        <li>textos com linguagem simples;</li>
-                        <li>descrições completas das imagens;</li>
-                        <li>áudios explicativos;</li>
-                        <li>compatibilidade com leitores de tela;</li>
-                        <li>fonte ampliada e alto contraste entre texto e fundo.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="modulo1" class="secao-aula">
-                <h2>Página 3 – Módulo 1: O que é Fotossíntese?</h2>
-                <button class="btn-leitura" onclick="tocarAudioReal('modulo1.mp3', this)">🔊 Ouvir Texto</button>
-
-                <div class="card-texto">
-                    <p>A fotossíntese é o processo pelo qual as plantas produzem seu próprio alimento utilizando a luz do Sol, a água absorvida pelas raízes e o gás carbônico presente no ar.</p>
-                    <p>Como resultado desse processo, a planta produz glicose, que serve como alimento, e libera oxigênio para a atmosfera.</p>
-                    <div class="box-imagem">
-                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=600&q=80" alt="Imagem de uma árvore verde recebendo luz do Sol. As raízes absorvem água do solo, as folhas recebem gás carbônico do ar e liberam oxigênio para a atmosfera.">
+                    <div class="coluna-imagem">
+                        <img src="foto1.png" alt="Ilustração de uma planta verde sob a luz do sol. As raízes absorvem água do solo, as folhas recebem gás carbônico do ar e a planta libera oxigênio para a atmosfera.">
                     </div>
                 </div>
+
+                <div class="card-audiodescricao">
+                    <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Descrição da imagem (audiodescrição)</h3>
+                    <p>Ilustração de uma planta verde sob a luz do sol. As raízes absorvem água do solo. As folhas recebem gás carbônico do ar. A planta utiliza a luz do sol para produzir glicose (alimento) e liberar oxigênio para a atmosfera.</p>
+                </div>
+
+                <div class="card-leitor-tela">
+                    <h3><i class="fas fa-robot" aria-hidden="true"></i> Leitor de Tela</h3>
+                    <p>Este site é compatível com leitores de tela. Navegue utilizando as teclas de atalho do seu leitor para uma melhor experiência.</p>
+                </div>
             </section>
 
+
+
+
             <section id="modulo2" class="secao-aula">
-                <h2>Página 4 – Módulo 2: Como acontece a Fotossíntese?</h2>
+                <h2>Página 3 – Módulo 2: Como acontece a Fotossíntese?</h2>
                 <button class="btn-leitura" onclick="tocarAudioReal('modulo2.mp3', this)">🔊 Ouvir Texto</button>
 
                 <div class="card-texto">
@@ -110,7 +134,7 @@
             </section>
 
             <section id="modulo3" class="secao-aula">
-                <h2>Página 5 – Módulo 3: Importância da Fotossíntese</h2>
+                <h2>Página 4 – Módulo 3: Importância da Fotossíntese</h2>
                 <button class="btn-leitura" onclick="tocarAudioReal('modulo3.mp3', this)">🔊 Ouvir Texto</button>
 
                 <div class="card-texto">
@@ -120,7 +144,7 @@
             </section>
 
             <section id="curiosidades" class="secao-aula">
-                <h2>Página 6 – Curiosidades</h2>
+                <h2>Página 5 – Curiosidades</h2>
                 <button class="btn-leitura" onclick="tocarAudioReal('Curiosidades.mp3', this)">🔊 Ouvir Texto</button>
                 <div class="card-texto">
                     <ul>
@@ -132,7 +156,7 @@
             </section>
 
             <section id="atividades" class="secao-aula">
-                <h2>Página 7 – Atividades</h2>
+                <h2>Página 6 – Atividades</h2>
                 <button class="btn-leitura" onclick="lerTextoAtual('atividades')">🔊 Ouvir Atividades</button>
                 <div class="card-texto">
                     <h3>Questões Objetivas</h3>
@@ -178,7 +202,7 @@
             </section>
 
             <section id="tecnologias" class="secao-aula">
-                <h2>Página 8 – Tecnologias Assistivas</h2>
+                <h2>Página 7 – Tecnologias Assistivas</h2>
                 <button class="btn-leitura" onclick="lerTextoAtual('tecnologias')">🔊 Ouvir Texto</button>
                 <div class="card-texto">
                     <p>Este site utiliza as seguintes tecnologias integradas e diretrizes:</p>
@@ -191,7 +215,7 @@
             </section>
 
             <section id="dua" class="secao-aula">
-                <h2>Página 9 – Desenho Universal para Aprendizagem (DUA)</h2>
+                <h2>Página 8 – Desenho Universal para Aprendizagem (DUA)</h2>
                 <button class="btn-leitura" onclick="lerTextoAtual('dua')">🔊 Ouvir Diretrizes DUA</button>
                 <div class="card-texto">
                     <p><strong>Múltiplas formas de representação:</strong><br>O conteúdo é apresentado em texto, áudio e imagens com descrição.</p>
@@ -201,7 +225,7 @@
             </section>
 
             <section id="referencias" class="secao-aula">
-                <h2>Página 10 – Referências</h2>
+                <h2>Página 9 – Referências</h2>
                 <button class="btn-leitura" onclick="lerTextoAtual('referencias')">🔊 Ouvir Referências</button>
                 <div class="card-texto">
                     <ul>

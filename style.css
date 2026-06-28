@@ -141,10 +141,108 @@ fieldset input[type="radio"] { margin-right: 10px; transform: scale(1.2); }
 /* Foco de Teclado Acessível */
 button:focus, a:focus, input:focus { outline: 3px solid var(--focus-outline); outline-offset: 3px; }
 
-/* Responsividade Celular */
+/* Adaptação para manter layout lado a lado no celular */
 @media (max-width: 768px) {
-    .plataforma-container { flex-direction: column; }
-    .sidebar-curso { width: 100%; height: auto; border-right: none; border-bottom: 3px solid var(--border-color); }
-    body { overflow: auto; height: auto; }
-    .conteudo-aula { overflow-y: visible; padding: 20px; }
+    .sidebar-curso {
+        width: 32%; /* Diminuído para dar mais espaço ao texto */
+        min-width: 110px;
+    }
+    
+    .conteudo-aula {
+        padding: 10px;
+    }
+    
+    .card-texto {
+        padding: 12px;
+    }
+    
+    .secao-aula h2 {
+        font-size: 1.15rem; /* Título um pouco menor */
+        margin-bottom: 10px;
+    }
+    
+    body {
+        font-size: 0.9rem; /* Fonte reduzida para melhorar a leitura na coluna estreita */
+        line-height: 1.4;
+    }
+    
+    .sidebar-header {
+        padding: 10px 5px;
+    }
+    
+    .sidebar-header h1 {
+        font-size: 0.70rem; /* Ajuste no título principal "Fotossíntese" */
+        word-wrap: break-word; /* Garante que a palavra quebre linha se não couber, em vez de vazar */
+    }
+    
+    .meta-curso {
+        font-size: 0.65rem;
+    }
+    
+    .menu-curso {
+        padding: 8px 4px;
+    }
+    
+    .menu-curso button {
+        font-size: 0.7rem; 
+        padding: 6px;
+        gap: 4px;
+        /* Força a palavra a se manter alinhada sem quebras abruptas */
+        word-break: keep-all; 
+    }
+    
+    .btn-leitura {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+/* Layout em Grid para colunas */
+.grid-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+    align-items: start; /* Garante que a imagem e o texto fiquem alinhados no topo */
+}
+
+/* Garante que a imagem nunca vaze da coluna, seja no celular ou PC */
+.coluna-imagem img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Dá um sombreado bonito como na sua referência */
+}
+
+/* Card Estilizado do Player */
+.card-player {
+    display: flex;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste se a tela for pequena */
+    align-items: center;
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+}
+
+.player-info {
+    flex: 1; /* Faz o texto do player empurrar os elementos corretamente */
+}
+
+.card-player audio {
+    width: 100%; /* Garante que a barra de áudio não ultrapasse o card */
+    margin-top: 10px;
+}
+
+/* Cards de Acessibilidade Diferenciados */
+.card-audiodescricao { background: #fffdf0; padding: 20px; border-radius: var(--radius); border-left: 5px solid #ffc107; margin-bottom: 15px; }
+.card-leitor-tela { background: #e7f3ff; padding: 20px; border-radius: var(--radius); border-left: 5px solid #0056b3; }
+
+/* Responsividade: Se o celular for muito estreito, empilha as colunas */
+@media (max-width: 768px) {
+    .grid-conteudo { 
+        grid-template-columns: 1fr; /* Coloca o texto em cima e a imagem embaixo no celular */
+    }
 }
