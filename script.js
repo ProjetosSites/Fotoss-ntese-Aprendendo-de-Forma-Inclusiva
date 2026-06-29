@@ -136,3 +136,50 @@ function tocarAudioReal(nomeDoArquivo, elementoBotao) {
         resetarBotaoAudio();
     };
 }
+// ==========================================
+// FUNÇÕES DE ACESSIBILIDADE (Barra Superior)
+// ==========================================
+
+// Variável para controlar o tamanho atual da fonte
+let nivelFonte = 0;
+
+// Função para Aumentar ou Diminuir a Fonte
+function ajustarFonte(acao) {
+    const root = document.documentElement; // Pega a raiz do documento (HTML)
+    
+    // acao = 1 (Aumentar), acao = -1 (Diminuir), acao = 0 (Resetar)
+    if (acao === 1 && nivelFonte < 3) {
+        nivelFonte++;
+    } else if (acao === -1 && nivelFonte > -1) {
+        nivelFonte--;
+    } else if (acao === 0) {
+        nivelFonte = 0;
+    }
+
+    // Calcula o novo tamanho base (padrão é 16px, aumenta/diminui 2px por clique)
+    let novoTamanho = 16 + (nivelFonte * 2);
+    
+    // Aplica o novo tamanho no HTML para que todas as unidades 'rem' se ajustem
+    root.style.fontSize = novoTamanho + 'px';
+}
+
+// Função para Alternar o Alto Contraste
+function alternarAltoContraste() {
+    const body = document.body;
+    body.classList.toggle('alto-contraste'); // Adiciona ou remove a classe
+    
+    // Salva a preferência do usuário no navegador (Local Storage)
+    if (body.classList.contains('alto-contraste')) {
+        localStorage.setItem('altoContraste', 'ativo');
+    } else {
+        localStorage.setItem('altoContraste', 'inativo');
+    }
+}
+
+// Função para verificar se o Alto Contraste já estava ativo quando a página carregou
+window.onload = function() {
+    const contrasteSalvo = localStorage.getItem('altoContraste');
+    if (contrasteSalvo === 'ativo') {
+        document.body.classList.add('alto-contraste');
+    }
+}

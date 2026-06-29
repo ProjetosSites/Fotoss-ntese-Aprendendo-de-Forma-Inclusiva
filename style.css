@@ -23,6 +23,8 @@ body {
     line-height: 1.6;
     height: 100vh;
     overflow: hidden;
+    display: flex;           /* ADICIONADO: Ativa o modo flexível */
+    flex-direction: column;  /* ADICIONADO: Empilha a barra e o site */
 }
 
 /* Previne zoom acidental de "toque duplo" em celulares, mas mantém o zoom de pinça */
@@ -41,7 +43,12 @@ button, a, input, label {
     font-weight: bold; border-radius: var(--radius); display: block;
 }
 
-.plataforma-container { display: flex; height: 100vh; width: 100vw; }
+.plataforma-container { 
+    display: flex; 
+    flex: 1;                 /* Faz ocupar exatamente o restante da tela */
+    width: 100vw; 
+    overflow: hidden;
+}
 
 /* BARRA LATERAL (Clara) */
 .sidebar-curso {
@@ -245,4 +252,119 @@ button:focus, a:focus, input:focus { outline: 3px solid var(--focus-outline); ou
     .grid-conteudo { 
         grid-template-columns: 1fr; /* Coloca o texto em cima e a imagem embaixo no celular */
     }
+}
+
+/* =========================================
+   BARRA SUPERIOR DE ACESSIBILIDADE
+   ========================================= */
+.topbar-acessibilidade {
+    background-color: #2c3e50; /* Azul escuro elegante */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 30px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap; 
+    gap: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.topbar-logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topbar-logo .logo-subtexto {
+    font-weight: normal;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.topbar-controles {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.controle-fonte {
+    display: flex;
+    gap: 5px;
+}
+
+.controle-fonte button,
+.btn-contraste {
+    background-color: #34495e;
+    color: #ffffff;
+    border: 1px solid #7f8c8d;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.controle-fonte button:hover,
+.btn-contraste:hover {
+    background-color: #4CAF50; /* Fica verde ao passar o mouse */
+    border-color: #4CAF50;
+    color: #ffffff;
+}
+
+.topbar-acessibilidade .divisor {
+    width: 2px;
+    height: 24px;
+    background-color: #7f8c8d;
+}
+
+/* Ajustes automáticos para quando estiver no celular */
+@media (max-width: 768px) {
+    .topbar-acessibilidade {
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+    
+    .topbar-logo .logo-subtexto {
+        display: none; /* Esconde o texto longo no celular para a barra não ficar gigante */
+    }
+}
+
+
+/* =========================================
+   REGRAS DE ACESSIBILIDADE - ALTO CONTRASTE (VERSÃO INTELIGENTE)
+   ========================================= */
+body.alto-contraste {
+    /* Basta trocar o valor das variáveis e o site todo obedece! */
+    --bg-main: #000000;
+    --bg-sidebar: #000000;
+    --bg-card: #121212;
+    --text-color: #ffffff;
+    --accent-color: #ffff00;
+    --accent-hover: #e6e600;
+    --border-color: #ffff00;
+}
+
+body.alto-contraste .topbar-acessibilidade {
+    background-color: #000000;
+    border-bottom: 2px solid #ffff00;
+}
+
+body.alto-contraste .controle-fonte button,
+body.alto-contraste .btn-contraste {
+    color: #ffff00;
+    background-color: transparent;
+    border: 1px solid #ffff00;
+}
+
+body.alto-contraste img,
+body.alto-contraste iframe {
+    filter: contrast(1.2) brightness(0.9);
 }

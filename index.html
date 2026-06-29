@@ -12,9 +12,31 @@
 </head>
 <body>
 
+    <!-- Nova Barra Superior de Acessibilidade -->
+    <header class="topbar-acessibilidade">
+        <div class="topbar-logo">
+            <span class="logo-texto">FOTOSSÍNTESE</span> 
+            <i class="fas fa-leaf" style="color: #4CAF50;"></i>
+            <span class="logo-subtexto">| Aprendendo de forma inclusiva</span>
+        </div>
+        
+        <div class="topbar-controles">
+            <div class="controle-fonte">
+                <button onclick="ajustarFonte(1)" aria-label="Aumentar fonte">A+</button>
+                <button onclick="ajustarFonte(0)" aria-label="Tamanho original da fonte">A</button>
+                <button onclick="ajustarFonte(-1)" aria-label="Diminuir fonte">A-</button>
+            </div>
+            <div class="divisor"></div>
+            <button onclick="alternarAltoContraste()" class="btn-contraste">
+                <i class="fas fa-adjust"></i> Alto contraste
+            </button>
+        </div>
+    </header>
+
     <a href="#conteudo-principal" class="sr-only">Pular para o conteúdo da aula</a>
 
     <div class="plataforma-container">
+
         
         <aside class="sidebar-curso">
             <header class="sidebar-header">
@@ -42,13 +64,16 @@
             
             <section id="inicio" class="secao-aula ativa">
                 <h2>Bem-vindo!</h2>
-                <button class="btn-leitura" onclick="tocarAudioReal('inicio.mp3', this)">🔊 Ouvir Texto</button>
-
-
+                
                 <div class="card-texto">
                     <p>Este site foi desenvolvido para ensinar o conteúdo de Fotossíntese de maneira acessível e inclusiva para estudantes com deficiência visual. Aqui você encontrará textos claros, descrições de imagens, áudios explicativos, atividades e recursos que facilitam a aprendizagem.</p>
-                    <h3>Tema</h3><p>Fotossíntese</p>
-                    <h3>Público-alvo</h3><p>Alunos do 7º ano do Ensino Fundamental com deficiência visual (cegueira ou baixa visão).</p>
+                    
+                    <h3>Tema</h3>
+                    <p>Fotossíntese</p>
+                    
+                    <h3>Público-alvo</h3>
+                    <p>Alunos do 7º ano do Ensino Fundamental com deficiência visual (cegueira ou baixa visão).</p>
+                    
                     <h3>Objetivos de Aprendizagem</h3>
                     <ul>
                         <li>Compreender o que é a fotossíntese.</li>
@@ -56,11 +81,23 @@
                         <li>Explicar a importância da fotossíntese para os seres vivos.</li>
                         <li>Relacionar a fotossíntese com a produção de oxigênio e alimentos.</li>
                     </ul>
+                    
                     <h3>Justificativa</h3>
                     <p>A fotossíntese é um dos processos mais importantes da natureza, pois permite que as plantas produzam seu próprio alimento e liberem oxigênio para a atmosfera.</p>
                     <p>Este site foi desenvolvido seguindo princípios de acessibilidade, utilizando recursos como audiodescrição, textos alternativos e conteúdo compatível com leitores de tela, garantindo que estudantes com deficiência visual tenham acesso ao conhecimento em igualdade de condições.</p>
+                    
+                    <!-- Novo Card do Player -->
+                    <div class="card-player" style="margin-top: 20px;">
+                        <i class="fas fa-volume-up" aria-hidden="true" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                        <div class="player-info">
+                            <strong>Ouvir introdução</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
+                            <button class="btn-leitura" onclick="lerTextoAtual('inicio')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                        </div>
+                    </div>
                 </div>
             </section>
+
 
             <section id="modulo1" class="secao-aula">
                 <h2>Módulo 1: Introdução</h2>
@@ -86,7 +123,7 @@
                     </div>
 
                     <div class="coluna-imagem" style="text-align: center;">
-                        <img src="foto1.png" alt="Ilustração de uma planta verde sob a luz do sol. As raízes absorvem água do solo, as folhas recebem gás carbônico do ar e a planta libera oxigênio para a atmosfera." style="max-width: 280px; width: 100%; height: auto; border-radius: 12px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <img src="foto1.png" alt="Ilustração de uma planta verde sob a luz do sol. As raízes absorvem água do solo, as folhas recebem gás carbônico do ar e a planta libera oxigênio para a atmosfera." style=" width: 100%; height: auto; border-radius: 12px; margin: 0 auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                     </div>
                 </div>
 
@@ -159,7 +196,7 @@
                         <!-- Vídeo YouTube ajustado para eliminar bordas pretas -->
                         <iframe 
                             width="100%" 
-                            height="auto" 
+                            
                             src="https://www.youtube.com/embed/noPhBVXeXww" 
                             title="Vídeo explicando a fotossíntese" 
                             frameborder="0" 
@@ -176,7 +213,7 @@
                     <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Descrição das mídias (audiodescrição)</h3>
                     <p><strong>Imagem 1:</strong> Ilustração de um cloroplasto funcionando como uma cozinha da planta. Setas indicam a entrada de luz solar, água e gás carbônico, e a saída de açúcar e oxigênio.</p>
                     <p><strong>Imagem 2:</strong> Esquema visual demonstrando o resumo da fotossíntese, com a energia solar, água e gás carbônico se transformando em alimento e oxigênio.</p>
-                    <p><strong>Vídeo:</strong> Um vídeo com uma explicação detalhada sobre o processo da fotossíntese[span_1](start_span)[span_1](end_span).</p>
+                    <p><strong>Vídeo:</strong> Um vídeo com uma explicação detalhada sobre o processo da fotossíntese.</p>
                 </div>
 
                 <div class="card-leitor-tela">
@@ -233,7 +270,7 @@
                 <!-- Cards de Acessibilidade -->
                 <div class="card-audiodescricao">
                     <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Descrição da imagem (audiodescrição)</h3>
-                    <p>Composição de imagens ilustrando as utilidades das plantas no cotidiano: alimentos, um carro sendo abastecido com etanol, uma camiseta de algodão e cadernos de papel. Lembre-se de ajustar este texto conforme a imagem real escolhida.</p>
+                    <p>Composição de imagens ilustrando as utilidades das plantas no cotidiano: alimentos, um carro sendo abastecido com etanol, uma camiseta de algodão e cadernos de papel.</p>
                 </div>
 
                 <div class="card-leitor-tela">
@@ -409,7 +446,7 @@
                         </li>
                         <li>
                             <i class="fab fa-youtube" aria-hidden="true"></i> 
-                            <a href="https://youtu.be/noPhBVXeXww" target="_blank">Vídeo Explicativo: A importância da Fotossíntese</a>[span_1](start_span)[span_1](end_span)
+                            <a href="https://youtu.be/noPhBVXeXww" target="_blank">Vídeo Explicativo: A importância da Fotossíntese</a>
                         </li>
                         <li><i class="fas fa-book" aria-hidden="true"></i> Livro de Ciências do 7º ano.[span_2](start_span)[span_2](end_span)</li>
                         <li><i class="fas fa-university" aria-hidden="true"></i> Ministério da Educação (MEC).[span_3](start_span)[span_3](end_span)</li>
