@@ -183,3 +183,19 @@ window.onload = function() {
         document.body.classList.add('alto-contraste');
     }
 }
+// ==========================================
+// INTEGRAÇÃO DO VLIBRAS (Carregamento Seguro)
+// ==========================================
+window.addEventListener('load', function() {
+    // Cria a tag de script dinamicamente
+    const scriptVlibras = document.createElement('script');
+    scriptVlibras.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+    
+    // Quando o script baixar, inicializa o widget
+    scriptVlibras.onload = function() {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    
+    // Injeta o script no corpo do site
+    document.body.appendChild(scriptVlibras);
+});
