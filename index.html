@@ -121,7 +121,7 @@
                             <div class="player-info">
                                 <strong>Ouvir introdução</strong>
                                 <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
-                                <button class="btn-leitura" onclick="lerTextoAtual('modulo1')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                               <button class="btn-leitura" onclick="tocarAudioReal('m1.mp3', this)">🔊 Ouvir Texto</button>
                             </div>
                         </div>
                     </div>
@@ -141,10 +141,6 @@
                     <p>Este site é compatível com leitores de tela. Navegue utilizando as teclas de atalho do seu leitor para uma melhor experiência.</p>
                 </div>
             </section>
-
-
-
-
 
             <section id="modulo2" class="secao-aula">
                 <h2>Módulo 2: Como Funciona a Fotossíntese? Os Conceitos Principais</h2>
@@ -186,7 +182,7 @@
                             <div class="player-info">
                                 <strong>Ouvir explicação</strong>
                                 <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
-                                <button class="btn-leitura" onclick="lerTextoAtual('modulo2')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                                <button class="btn-leitura" onclick="tocarAudioReal('m2.mp3', this)">🔊 Ouvir Texto</button>
                             </div>
                         </div>
                     </div>
@@ -260,7 +256,7 @@
                             <div class="player-info">
                                 <strong>Ouvir explicação</strong>
                                 <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
-                                <button class="btn-leitura" onclick="lerTextoAtual('modulo3')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                                <button class="btn-leitura" onclick="tocarAudioReal('m3.mp3', this)">🔊 Ouvir Texto</button>
                             </div>
                         </div>
                     </div>
@@ -310,7 +306,7 @@
                             <div class="player-info">
                                 <strong>Ouvir curiosidades</strong>
                                 <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler o texto.</p>
-                                <button class="btn-leitura" onclick="lerTextoAtual('curiosidades')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                                <button class="btn-leitura" onclick="tocarAudioReal('c.mp3', this)">🔊 Ouvir Texto</button>
                             </div>
                         </div>
                     </div>
@@ -366,7 +362,7 @@
                                 <label><input type="radio" name="q3" value="C"> Os parques e praças das grandes cidades.</label>
                             </fieldset>
 
-                            <button type="submit" class="btn-enviar">Verificar Respostas</button>
+                            
                         </form>
 
                         <div id="resultado-quiz" aria-live="polite" class="resultado-box-mensagem"></div>
@@ -377,7 +373,7 @@
                             <div class="player-info">
                                 <strong>Ouvir atividades</strong>
                                 <p style="font-size: 0.9rem; margin-bottom: 5px;">Clique no botão para o sistema ler as questões.</p>
-                                <button class="btn-leitura" onclick="lerTextoAtual('atividades')" style="margin: 0; padding: 6px 15px; font-size: 0.9rem;">▶️ Ouvir Texto</button>
+                               <button class="btn-leitura" onclick="tocarAudioReal('at.mp3', this)">🔊 Ouvir Texto</button>
                             </div>
                         </div>
                     </div>
@@ -416,7 +412,7 @@
 
             <section id="tecnologias" class="secao-aula">
                 <h2>Página 7 – Tecnologias Assistivas</h2>
-                <button class="btn-leitura" onclick="lerTextoAtual('tecnologias')">🔊 Ouvir Texto</button>
+                <button class="btn-leitura" onclick="tocarAudioReal('as.mp3', this)">🔊 Ouvir Texto</button>
                 <div class="card-texto">
                     <p>Este site utiliza as seguintes tecnologias integradas e diretrizes:</p>
                     <ul>
@@ -429,7 +425,7 @@
 
             <section id="dua" class="secao-aula">
                 <h2>Página 8 – Desenho Universal para Aprendizagem (DUA)</h2>
-                <button class="btn-leitura" onclick="lerTextoAtual('dua')">🔊 Ouvir Diretrizes DUA</button>
+                <button class="btn-leitura" onclick="tocarAudioReal('dua.mp3', this)">🔊 Ouvir Texto</button>
                 <div class="card-texto">
                     <p><strong>Múltiplas formas de representação:</strong><br>O conteúdo é apresentado em texto, áudio e imagens com descrição.</p>
                     <p><strong>Múltiplas formas de ação e expressão:</strong><br>O estudante responde por escrito ou por gravação de áudio.</p>
@@ -439,7 +435,7 @@
 
             <section id="referencias" class="secao-aula">
                 <h2>Página 9: Referências</h2>
-                <button class="btn-leitura" onclick="lerTextoAtual('referencias')">🔊 Ouvir Referências</button>
+                <button class="btn-leitura" onclick="tocarAudioReal('r.mp3', this)">🔊 Ouvir Texto</button>
                 
                 <div class="card-texto">
                     <h3>Fontes Consultadas</h3>
